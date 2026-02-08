@@ -1,0 +1,228 @@
+{
+  "kind": "build_request",
+  "title": "Smart College System — Responsive AI-powered college management website with feature showcase and demos",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Build a modern, responsive landing website named “Smart College System” with an academic blue/white theme, professional typography, card-based layout, icons, and smooth UI animations; ensure the full site works well on mobile and desktop.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Create a modern, responsive, and professional website called “Smart College System”",
+          "clean UI, academic color theme (blue/white), and be optimized for desktop and mobile. Use modern cards, icons, dashboards, and smooth animations.",
+          "the website should be working on both mobile as well as desktop"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Site uses a consistent blue/white academic visual theme across all sections (backgrounds, surfaces, typography, buttons, and links).",
+        "Responsive layouts are implemented for common breakpoints (mobile, tablet, desktop) without horizontal scrolling.",
+        "UI includes modern cards and icons for feature highlights.",
+        "Section transitions / element entrances include subtle smooth animations without harming performance or accessibility (prefers-reduced-motion respected)."
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Implement the landing page structure with the required sections and English user-facing text: Hero (with headline exactly “Smart College System – AI-Powered Education Management”), Features (icons + brief explanations), Dashboard preview mockup section, Benefits section (Students / Faculty / Admin), About & Future Scope of AI in education, Contact form, and Footer with social links.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Website Structure:\n* Hero section with headline: “Smart College System – AI-Powered Education Management”\n* Feature sections with icons and brief explanations\n* Dashboard preview / screenshots mockup\n* Benefits section for Students, Faculty, and Admin\n* About the system & future scope of AI in education\n* Contact form and footer with social links"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Hero section renders the exact headline string provided.",
+        "Each required section is present and reachable via scrolling; optional top navigation anchors (if added) scroll to the correct sections.",
+        "All user-facing copy is in English.",
+        "Footer contains at least 3 social links (placeholders allowed) and standard footer metadata (e.g., copyright)."
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "Add feature showcase cards/tiles for the seven core modules, each with an icon and a concise description: AI Student Portal, AI Chatbot / Virtual Assistant, Smart Analytics Dashboard, AI Faculty Assistant, Face Recognition Attendance (Concept/Demo), Smart Admissions System, and Campus Intelligence.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Core Features to Showcase:\n* 🎓 AI Student Portal...\n* 🤖 AI Chatbot / Virtual Assistant...\n* 📊 Smart Analytics Dashboard...\n* 🧑‍🏫 AI Faculty Assistant...\n* 📸 Face Recognition Attendance (Concept/Demo)...\n* 🧾 Smart Admissions System...\n* 🏫 Campus Intelligence..."
+        ]
+      },
+      "acceptanceCriteria": [
+        "All seven modules are shown with distinct icons and short descriptions.",
+        "Each module description mentions the specific capabilities stated by the user (e.g., attendance tracking/marks for Student Portal; courses/fees/timetable/exams/results/campus services for Chatbot; charts/trends/risk prediction for Analytics, etc.).",
+        "Layout remains readable and well-spaced on mobile and desktop (no cramped cards, no overflow)."
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "text": "Create a “Dashboard Preview” section that visually demonstrates the platform with screenshot-style mockups (static images) and accompanying captions for student performance, attendance, notifications, and analytics.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Dashboard preview / screenshots mockup"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Dashboard Preview section includes at least 2 mock screenshot panels and short captions describing what each panel represents.",
+        "Mockups render crisply on retina displays and scale down appropriately on mobile."
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "text": "Add a “Face Recognition Attendance (Concept/Demo)” section that explains the AI-based face attendance workflow and includes camera UI-style mockup visuals plus a simple step-by-step workflow visualization (conceptual, not real face recognition).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Face Recognition Attendance (Concept/Demo) – A demo section explaining AI-based facial recognition attendance with camera UI mockups and workflow visuals."
+        ]
+      },
+      "acceptanceCriteria": [
+        "Section explicitly indicates this is a concept/demo and does not claim real biometric processing.",
+        "Camera UI mockup visual is displayed along with a clear multi-step workflow (e.g., Capture → Detect → Match → Mark Attendance)."
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "text": "Include lightweight interactive demos (no external AI/LLM integration): (1) a Smart Admissions eligibility checker form (marks, category, course preference) that shows instant results client-side; (2) a Chatbot UI mock that answers a fixed set of FAQs about courses, fees, timetable, exams, results, and campus services.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Smart Admissions System – AI-based eligibility checker for admissions using marks, category, and course preferences with instant results.",
+          "AI Chatbot / Virtual Assistant – A conversational chatbot that answers queries related to courses, fees, timetable, exams, results, and campus services."
+        ]
+      },
+      "acceptanceCriteria": [
+        "Admissions checker accepts inputs for marks, category, and course preference and returns an immediate eligibility outcome (rules can be simplified but must be deterministic and clearly explained in UI).",
+        "Chatbot mock supports at least 8 predefined Q&A intents spanning the listed topics; unknown queries receive a friendly fallback response.",
+        "No external API calls are used for AI responses."
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "text": "Implement a Contact form that lets users submit name, email, subject, and message; persist submissions in the Motoko canister and show a clear success/error state in the UI.",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Contact form and footer with social links"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Contact form validates required fields and basic email format before submit.",
+        "On submit, the frontend calls the backend to store the message and displays a success confirmation state.",
+        "Backend exposes an update method to create a contact message and a query method to list messages (for future admin use); the UI does not need an admin page unless added incidentally.",
+        "Data persists across page reloads."
+      ]
+    },
+    {
+      "id": "REQ-8",
+      "text": "Apply a consistent, innovative, trustworthy visual direction suitable for a final-year project/startup MVP demo while staying within the requested academic blue/white palette; define a coherent set of UI tokens (primary/secondary colors, surface colors, typography scale, spacing, button styles) and use them throughout.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "The website should feel innovative, trustworthy, and suitable for a final-year project, startup MVP, or college demo.",
+          "academic color theme (blue/white)"
+        ]
+      },
+      "acceptanceCriteria": [
+        "A single consistent visual system is evident across all sections (same button styles, same card treatments, consistent headings/body sizing).",
+        "Blue/white remains the dominant palette; any additional accent color is used sparingly and consistently.",
+        "Icons, cards, and charts feel cohesive and not mismatched in style."
+      ]
+    },
+    {
+      "id": "REQ-9",
+      "text": "Add static “Smart Analytics Dashboard” visuals (charts/graphs) illustrating student performance trends, risk prediction, and improvement suggestions (conceptual). Charts can be illustrative (static images or simple client-side chart rendering) but must not require external services.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Smart Analytics Dashboard – Visual charts and graphs showing student performance trends, risk prediction, and academic improvement suggestions using AI."
+        ]
+      },
+      "acceptanceCriteria": [
+        "Analytics section contains at least 2 chart-style visuals and short explanatory text for trends, risk prediction, and suggested improvements.",
+        "No third-party analytics/AI services are called from the app."
+      ]
+    },
+    {
+      "id": "REQ-10",
+      "text": "Add a simple top navigation (or sticky header) with links to major sections (Features, Dashboard, Benefits, About, Contact) and ensure accessibility basics (semantic headings, keyboard navigation, focus states, contrast).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Website Structure: ... Feature sections ... Benefits ... About ... Contact form ..."
+        ]
+      },
+      "acceptanceCriteria": [
+        "Navigation links scroll to the correct section anchors.",
+        "Interactive elements are keyboard accessible with visible focus states.",
+        "Headings follow a logical hierarchy (one H1, then H2s, etc.).",
+        "Color contrast is sufficient for primary text and buttons."
+      ]
+    },
+    {
+      "id": "REQ-11",
+      "text": "Render all generated image assets from the frontend as static files under frontend/public/assets/generated and reference them directly from the UI (do not serve images through the backend).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ]
+      },
+      "acceptanceCriteria": [
+        "All images listed in imageRequirements.required exist under frontend/public/assets/generated and are used in the relevant sections.",
+        "No backend endpoints are created for image delivery."
+      ]
+    }
+  ],
+  "constraints": [
+    "Use React + TypeScript + Tailwind + Shadcn UI components via composition; do not edit files in frontend/src/components/ui.",
+    "Do not modify immutable paths: frontend/src/hooks/useInternetIdentity.ts, frontend/src/hooks/useInternetIdentity.tsx, frontend/src/hooks/useActor.ts, frontend/src/main.tsx.",
+    "Backend must remain a single Motoko actor in backend/main.mo; only add backend/migration.mo if state migrations become necessary.",
+    "Do not integrate external AI/LLM services; chatbot and AI features must be conceptual or rule-based demos."
+  ],
+  "nonGoals": [
+    "Implementing real face recognition, camera capture processing, or biometric storage.",
+    "Building a full production student information system (real student records, real attendance/marks ingestion).",
+    "Third-party authentication beyond Internet Identity (if login UI is added, it should be demo-only or II-based).",
+    "Real-time features (websockets, push notifications)."
+  ],
+  "imageRequirements": {
+    "required": [
+      "Abstract futuristic education hero illustration with campus + subtle AI circuit motifs (hero-illustration.dim_1600x900.png)",
+      "Clean dashboard screenshot-style mockup showing cards, charts, and a sidebar navigation (dashboard-mockup-1.dim_1400x900.png)",
+      "Second dashboard screenshot-style mockup showing attendance and marks overview cards (dashboard-mockup-2.dim_1400x900.png)",
+      "Camera UI mockup frame with face-detection bounding box overlay (face-attendance-camera-mock.dim_1200x800.png)",
+      "Simple horizontal workflow diagram with 4 steps and minimal icons (face-attendance-workflow.dim_1400x320.png)"
+    ],
+    "edits": []
+  }
+}

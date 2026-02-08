@@ -1,0 +1,87 @@
+{
+  "kind": "spec_vs_diff_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-04T08:59:18.258Z",
+  "summary": "The diff adds a full React landing page with required sections, feature cards, dashboard mockup previews, analytics charts, face-attendance concept demo, interactive admissions + chatbot demos, and a contact form wired to a Motoko backend method. However, some acceptance criteria are not evidenced (notably prefers-reduced-motion support and the presence of the required generated image files under public/assets/generated). The diff also introduces several backend/user-profile/access-control features not requested in the BuildRequest.",
+  "missing_requirements": [
+    {
+      "id": "REQ-1",
+      "requirement": "Section transitions / element entrances include subtle smooth animations without harming performance or accessibility (prefers-reduced-motion respected).",
+      "reason": "Animations are added via classes like animate-fade-in / animate-slide-in-left, but there is no evidence of prefers-reduced-motion handling (e.g., motion-reduce variants or CSS media query) in the provided diff summary.",
+      "evidence": [
+        "frontend/src/components/FeatureCard.tsx",
+        "frontend/src/components/sections/HeroSection.tsx",
+        "frontend/src/components/sections/BenefitsSection.tsx",
+        "frontend/src/components/demos/ChatbotMock.tsx"
+      ]
+    },
+    {
+      "id": "REQ-11",
+      "requirement": "All required generated image assets exist under frontend/public/assets/generated and are used in the relevant sections.",
+      "reason": "UI references the required image paths under /assets/generated, but the diff summary does not show the actual PNG files being added (they may be among omitted files). Existence cannot be confirmed from the provided diff summary.",
+      "evidence": [
+        "frontend/src/components/sections/HeroSection.tsx",
+        "frontend/src/components/sections/DashboardPreviewSection.tsx",
+        "frontend/src/components/sections/FaceAttendanceDemoSection.tsx"
+      ]
+    }
+  ],
+  "hallucinated_features": [
+    {
+      "description": "Backend user profile management (get/save caller profile, admin-restricted profile access).",
+      "reason": "The BuildRequest only asked for persisting contact form submissions; user profile APIs were not requested.",
+      "evidence": [
+        "backend/main.mo"
+      ]
+    },
+    {
+      "description": "Backend access control/authorization system initialization and secret-token-based initialization path on the frontend actor hook.",
+      "reason": "The BuildRequest did not request admin token initialization, authorization mixins, or permission-gated admin APIs beyond a simple contact submission/listing interface.",
+      "evidence": [
+        "backend/main.mo",
+        "frontend/src/hooks/useActor.ts"
+      ]
+    },
+    {
+      "description": "Footer attribution link to caffeine.ai.",
+      "reason": "Not requested by the BuildRequest (footer requirements were social links + standard metadata).",
+      "evidence": [
+        "frontend/src/components/Footer.tsx"
+      ]
+    }
+  ],
+  "confidence": 0.68,
+  "changed_files": [
+    "all_files_summary.json",
+    "backend/main.mo",
+    "frontend-file-summaries.txt",
+    "frontend/index.css",
+    "frontend/index.html",
+    "frontend/src/App.tsx",
+    "frontend/src/components/FeatureCard.tsx",
+    "frontend/src/components/Footer.tsx",
+    "frontend/src/components/Header.tsx",
+    "frontend/src/components/charts/RiskBarChart.tsx",
+    "frontend/src/components/charts/SimpleLineChart.tsx",
+    "frontend/src/components/demos/AdmissionsEligibilityDemo.tsx",
+    "frontend/src/components/demos/ChatbotMock.tsx",
+    "frontend/src/components/forms/ContactForm.tsx",
+    "frontend/src/components/sections/AboutSection.tsx",
+    "frontend/src/components/sections/AnalyticsSection.tsx",
+    "frontend/src/components/sections/BenefitsSection.tsx",
+    "frontend/src/components/sections/ContactSection.tsx",
+    "frontend/src/components/sections/DashboardPreviewSection.tsx",
+    "frontend/src/components/sections/FaceAttendanceDemoSection.tsx",
+    "frontend/src/components/sections/FeaturesSection.tsx",
+    "frontend/src/components/sections/HeroSection.tsx",
+    "frontend/src/components/sections/InteractiveDemosSection.tsx",
+    "frontend/src/hooks/useActor.ts",
+    "frontend/src/hooks/useInternetIdentity.ts",
+    "frontend/src/hooks/useSubmitContactForm.ts",
+    "frontend/src/index.css",
+    "frontend/src/main.tsx",
+    "frontend/src/utils/urlParams.ts",
+    "frontend/tailwind.config.js",
+    "project_state.json"
+  ]
+}

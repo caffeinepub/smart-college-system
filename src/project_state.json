@@ -1,0 +1,182 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 3,
+  "summary": "Build a modern, responsive marketing website for “Smart College System”, an AI-powered college management platform, with a clean blue/white academic UI, smooth animations, and sections showcasing core AI modules plus contact/social footer.",
+  "existing_features": [
+    {
+      "id": "feature-build-a-modern-responsive-landing-website-named-smart-college-system-with-an-academic-blue-white-theme-professional-typography-card-based-layout-icons-and-smooth-ui-animations-ensure-the-full-site-works-well-on-mobile-and-desktop",
+      "title": "Build a modern, responsive landing website named “Smart College System” with an academic blue/white theme, professional typography, card-based layout, icons, and smooth UI animations; ensure the full site works well on mobile and desktop.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-the-landing-page-structure-with-the-required-sections-and-english-user-facing-text-hero-with-headline-exactly-smart-college-system-ai-powered-education-management-features-icons-brief-explanations-dashboard-preview-mockup-section-benefits-section-students-faculty-admin-about-future-scope-of-ai-in-education-contact-form-and-footer-with-social-links",
+      "title": "Implement the landing page structure with the required sections and English user-facing text: Hero (with headline exactly “Smart College System – AI-Powered Education Management”), Features (icons + brief explanations), Dashboard preview mockup section, Benefits section (Students / Faculty / Admin), About & Future Scope of AI in education, Contact form, and Footer with social links.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-feature-showcase-cards-tiles-for-the-seven-core-modules-each-with-an-icon-and-a-concise-description-ai-student-portal-ai-chatbot-virtual-assistant-smart-analytics-dashboard-ai-faculty-assistant-face-recognition-attendance-concept-demo-smart-admissions-system-and-campus-intelligence",
+      "title": "Add feature showcase cards/tiles for the seven core modules, each with an icon and a concise description: AI Student Portal, AI Chatbot / Virtual Assistant, Smart Analytics Dashboard, AI Faculty Assistant, Face Recognition Attendance (Concept/Demo), Smart Admissions System, and Campus Intelligence.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-dashboard-preview-section-that-visually-demonstrates-the-platform-with-screenshot-style-mockups-static-images-and-accompanying-captions-for-student-performance-attendance-notifications-and-analytics",
+      "title": "Create a “Dashboard Preview” section that visually demonstrates the platform with screenshot-style mockups (static images) and accompanying captions for student performance, attendance, notifications, and analytics.",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-face-recognition-attendance-concept-demo-section-that-explains-the-ai-based-face-attendance-workflow-and-includes-camera-ui-style-mockup-visuals-plus-a-simple-step-by-step-workflow-visualization-conceptual-not-real-face-recognition",
+      "title": "Add a “Face Recognition Attendance (Concept/Demo)” section that explains the AI-based face attendance workflow and includes camera UI-style mockup visuals plus a simple step-by-step workflow visualization (conceptual, not real face recognition).",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-include-lightweight-interactive-demos-no-external-ai-llm-integration-1-a-smart-admissions-eligibility-checker-form-marks-category-course-preference-that-shows-instant-results-client-side-2-a-chatbot-ui-mock-that-answers-a-fixed-set-of-faqs-about-courses-fees-timetable-exams-results-and-campus-services",
+      "title": "Include lightweight interactive demos (no external AI/LLM integration): (1) a Smart Admissions eligibility checker form (marks, category, course preference) that shows instant results client-side; (2) a Chatbot UI mock that answers a fixed set of FAQs about courses, fees, timetable, exams, results, and campus services.",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-a-contact-form-that-lets-users-submit-name-email-subject-and-message-persist-submissions-in-the-motoko-canister-and-show-a-clear-success-error-state-in-the-ui",
+      "title": "Implement a Contact form that lets users submit name, email, subject, and message; persist submissions in the Motoko canister and show a clear success/error state in the UI.",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-apply-a-consistent-innovative-trustworthy-visual-direction-suitable-for-a-final-year-project-startup-mvp-demo-while-staying-within-the-requested-academic-blue-white-palette-define-a-coherent-set-of-ui-tokens-primary-secondary-colors-surface-colors-typography-scale-spacing-button-styles-and-use-them-throughout",
+      "title": "Apply a consistent, innovative, trustworthy visual direction suitable for a final-year project/startup MVP demo while staying within the requested academic blue/white palette; define a coherent set of UI tokens (primary/secondary colors, surface colors, typography scale, spacing, button styles) and use them throughout.",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-static-smart-analytics-dashboard-visuals-charts-graphs-illustrating-student-performance-trends-risk-prediction-and-improvement-suggestions-conceptual-charts-can-be-illustrative-static-images-or-simple-client-side-chart-rendering-but-must-not-require-external-services",
+      "title": "Add static “Smart Analytics Dashboard” visuals (charts/graphs) illustrating student performance trends, risk prediction, and improvement suggestions (conceptual). Charts can be illustrative (static images or simple client-side chart rendering) but must not require external services.",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-simple-top-navigation-or-sticky-header-with-links-to-major-sections-features-dashboard-benefits-about-contact-and-ensure-accessibility-basics-semantic-headings-keyboard-navigation-focus-states-contrast",
+      "title": "Add a simple top navigation (or sticky header) with links to major sections (Features, Dashboard, Benefits, About, Contact) and ensure accessibility basics (semantic headings, keyboard navigation, focus states, contrast).",
+      "reqIds": [
+        "REQ-10"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-render-all-generated-image-assets-from-the-frontend-as-static-files-under-frontend-public-assets-generated-and-reference-them-directly-from-the-ui-do-not-serve-images-through-the-backend",
+      "title": "Render all generated image assets from the frontend as static files under frontend/public/assets/generated and reference them directly from the UI (do not serve images through the backend).",
+      "reqIds": [
+        "REQ-11"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Create responsive, modern website UI (blue/white academic theme) optimized for desktop and mobile with cards, icons, and smooth animations",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Add hero section with headline “Smart College System – AI-Powered Education Management”",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Add feature showcase sections with icons and brief explanations for: AI Student Portal, AI Chatbot, Smart Analytics Dashboard, AI Faculty Assistant, Face Recognition Attendance (concept/demo), Smart Admissions System, Campus Intelligence",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "Include dashboard preview/screenshot-style mockup section",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-5",
+      "summary": "Add benefits section tailored for Students, Faculty, and Admin",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-6",
+      "summary": "Add About section including future scope of AI in education",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-7",
+      "summary": "Add contact form plus footer with social links",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "architectural_notes": [
+    "Use a clean, modern component-based layout with responsive design for both mobile and desktop.",
+    "Adopt an academic color theme (blue/white) and modern UI patterns (cards, icons, dashboards) with smooth animations."
+  ],
+  "known_issues": [],
+  "isFixRequest": false,
+  "imageRequirements": "## Required Images\n- Abstract futuristic education hero illustration with campus + subtle AI circuit motifs (hero-illustration.dim_1600x900.png)\n- Clean dashboard screenshot-style mockup showing cards, charts, and a sidebar navigation (dashboard-mockup-1.dim_1400x900.png)\n- Second dashboard screenshot-style mockup showing attendance and marks overview cards (dashboard-mockup-2.dim_1400x900.png)\n- Camera UI mockup frame with face-detection bounding box overlay (face-attendance-camera-mock.dim_1200x800.png)\n- Simple horizontal workflow diagram with 4 steps and minimal icons (face-attendance-workflow.dim_1400x320.png)",
+  "generatedImages": [
+    {
+      "filename": "hero-illustration.dim_1600x900.png",
+      "description": "Abstract futuristic education hero illustration with campus + subtle AI circuit motifs",
+      "targetWidth": 1600,
+      "targetHeight": 900
+    },
+    {
+      "filename": "dashboard-mockup-1.dim_1400x900.png",
+      "description": "Clean dashboard screenshot-style mockup showing cards, charts, and a sidebar navigation",
+      "targetWidth": 1400,
+      "targetHeight": 900
+    },
+    {
+      "filename": "dashboard-mockup-2.dim_1400x900.png",
+      "description": "Second dashboard screenshot-style mockup showing attendance and marks overview cards",
+      "targetWidth": 1400,
+      "targetHeight": 900
+    },
+    {
+      "filename": "face-attendance-camera-mock.dim_1200x800.png",
+      "description": "Camera UI mockup frame with face-detection bounding box overlay",
+      "targetWidth": 1200,
+      "targetHeight": 800
+    },
+    {
+      "filename": "face-attendance-workflow.dim_1400x320.png",
+      "description": "Simple horizontal workflow diagram with 4 steps and minimal icons",
+      "targetWidth": 1400,
+      "targetHeight": 320
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "Smart College System",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

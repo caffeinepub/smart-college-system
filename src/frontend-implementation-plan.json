@@ -1,0 +1,313 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Smart College System — Frontend landing + demos",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "summary": "Create a modern responsive landing site with blue/white academic theme, cards, icons, and subtle accessible animations.",
+      "acceptanceCriteria": [
+        "Site uses a consistent blue/white academic visual theme across all sections (backgrounds, surfaces, typography, buttons, and links).",
+        "Responsive layouts are implemented for common breakpoints (mobile, tablet, desktop) without horizontal scrolling.",
+        "UI includes modern cards and icons for feature highlights.",
+        "Section transitions / element entrances include subtle smooth animations without harming performance or accessibility (prefers-reduced-motion respected)."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/index.css",
+          "operation": "create",
+          "description": "Create global Tailwind + shadcn token setup and define blue/white theme CSS variables (primary/surfaces/typography/spacing), plus focus styles and motion-reduce rules for animations."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "create",
+          "description": "Implement the single-page responsive layout shell (header + sections + footer) with consistent card-based styling, icon usage, and motion-safe animations across sections."
+        },
+        {
+          "path": "frontend/src/components/sections/Section.tsx",
+          "operation": "create",
+          "description": "Add a reusable section wrapper (consistent max-width, spacing, semantic headings, and optional motion-safe entrance animation) to keep layout and typography cohesive."
+        },
+        {
+          "path": "frontend/src/components/ui/motion/RevealOnScroll.tsx",
+          "operation": "create",
+          "description": "Add a lightweight intersection-observer-based reveal wrapper that applies Tailwind motion-safe animations and respects prefers-reduced-motion."
+        }
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "summary": "Implement the landing page sections with the required English copy: Hero, Features, Dashboard Preview, Benefits, About & Future Scope, Contact form, and Footer with social links.",
+      "acceptanceCriteria": [
+        "Hero section renders the exact headline string provided.",
+        "Each required section is present and reachable via scrolling; optional top navigation anchors (if added) scroll to the correct sections.",
+        "All user-facing copy is in English.",
+        "Footer contains at least 3 social links (placeholders allowed) and standard footer metadata (e.g., copyright)."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Wire all required sections in the correct order with English user-facing copy and stable section IDs for anchor navigation (Hero, Features, Dashboard Preview, Benefits, About & Future Scope, Contact, Footer)."
+        },
+        {
+          "path": "frontend/src/components/sections/HeroSection.tsx",
+          "operation": "create",
+          "description": "Add the Hero section with the exact headline “Smart College System – AI-Powered Education Management”, supporting subtext, and CTA buttons that scroll to relevant sections."
+        },
+        {
+          "path": "frontend/src/components/sections/BenefitsSection.tsx",
+          "operation": "create",
+          "description": "Add a Benefits section with three audience columns/cards (Students, Faculty, Admin) using consistent iconography and card styling."
+        },
+        {
+          "path": "frontend/src/components/sections/AboutSection.tsx",
+          "operation": "create",
+          "description": "Add About & Future Scope content describing the system and conceptual AI directions in education (English copy, semantic headings)."
+        },
+        {
+          "path": "frontend/src/components/Footer.tsx",
+          "operation": "create",
+          "description": "Create a footer with at least three social links (placeholders allowed) and standard metadata."
+        }
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "summary": "Showcase seven core modules as feature cards/tiles with distinct icons and concise descriptions matching the requested capabilities.",
+      "acceptanceCriteria": [
+        "All seven modules are shown with distinct icons and short descriptions.",
+        "Each module description mentions the specific capabilities stated by the user (e.g., attendance tracking/marks for Student Portal; courses/fees/timetable/exams/results/campus services for Chatbot; charts/trends/risk prediction for Analytics, etc.).",
+        "Layout remains readable and well-spaced on mobile and desktop (no cramped cards, no overflow)."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/sections/FeaturesSection.tsx",
+          "operation": "create",
+          "description": "Implement the Features section using a responsive grid of seven cards with distinct icons and descriptions covering the exact module capabilities."
+        },
+        {
+          "path": "frontend/src/components/FeatureCard.tsx",
+          "operation": "create",
+          "description": "Create a reusable feature card component (icon + title + concise description) with consistent spacing, hover/focus states, and motion-safe micro-interactions."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Wire FeaturesSection into the page flow and ensure its anchor ID matches navigation links."
+        }
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "summary": "Create a Dashboard Preview section with static screenshot-style mockups and captions for student performance, attendance, notifications, and analytics.",
+      "acceptanceCriteria": [
+        "Dashboard Preview section includes at least 2 mock screenshot panels and short captions describing what each panel represents.",
+        "Mockups render crisply on retina displays and scale down appropriately on mobile."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/sections/DashboardPreviewSection.tsx",
+          "operation": "create",
+          "description": "Add a Dashboard Preview section that renders the static images frontend/public/assets/generated/dashboard-mockup-1.dim_1400x900.png and frontend/public/assets/generated/dashboard-mockup-2.dim_1400x900.png with captions for performance, attendance/marks, notifications, and analytics."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Wire DashboardPreviewSection into the page and ensure responsive layout (stack on mobile, side-by-side on desktop) with crisp image rendering."
+        }
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "summary": "Add a Face Recognition Attendance (Concept/Demo) section with camera UI mockup and a clear step-by-step workflow visualization (conceptual only).",
+      "acceptanceCriteria": [
+        "Section explicitly indicates this is a concept/demo and does not claim real biometric processing.",
+        "Camera UI mockup visual is displayed along with a clear multi-step workflow (e.g., Capture → Detect → Match → Mark Attendance)."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/sections/FaceAttendanceDemoSection.tsx",
+          "operation": "create",
+          "description": "Implement the Face Recognition Attendance (Concept/Demo) section including explicit demo disclaimer text plus the static visuals frontend/public/assets/generated/face-attendance-camera-mock.dim_1200x800.png and frontend/public/assets/generated/face-attendance-workflow.dim_1400x320.png."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Wire FaceAttendanceDemoSection into the page flow (near related Features/Analytics) and ensure responsive scaling and captions."
+        }
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "summary": "Implement two interactive demos: a rule-based Smart Admissions eligibility checker and a fixed-intent FAQ Chatbot UI mock (no external AI calls).",
+      "acceptanceCriteria": [
+        "Admissions checker accepts inputs for marks, category, and course preference and returns an immediate eligibility outcome (rules can be simplified but must be deterministic and clearly explained in UI).",
+        "Chatbot mock supports at least 8 predefined Q&A intents spanning the listed topics; unknown queries receive a friendly fallback response.",
+        "No external API calls are used for AI responses."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/sections/InteractiveDemosSection.tsx",
+          "operation": "create",
+          "description": "Create a combined section that contains both interactive demos (Admissions checker + Chatbot mock) with clear headings and short explanatory copy emphasizing conceptual/rule-based behavior."
+        },
+        {
+          "path": "frontend/src/components/demos/AdmissionsEligibilityDemo.tsx",
+          "operation": "create",
+          "description": "Implement a client-side admissions checker form (marks, category, course preference) with deterministic rules and an on-screen explanation of how eligibility is computed."
+        },
+        {
+          "path": "frontend/src/components/demos/ChatbotMock.tsx",
+          "operation": "create",
+          "description": "Implement a chatbot UI mock with at least 8 predefined intents covering courses, fees, timetable, exams, results, and campus services, plus a friendly fallback for unknown queries; no external calls."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Wire InteractiveDemosSection into the page and ensure it remains usable on mobile (stacked layout, accessible inputs)."
+        }
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "summary": "Create a Contact form UI that validates inputs and submits via the existing backend capability, showing clear success/error states.",
+      "acceptanceCriteria": [
+        "Contact form validates required fields and basic email format before submit.",
+        "On submit, the frontend calls the backend to store the message and displays a success confirmation state.",
+        "Backend exposes an update method to create a contact message and a query method to list messages (for future admin use); the UI does not need an admin page unless added incidentally.",
+        "Data persists across page reloads."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/sections/ContactSection.tsx",
+          "operation": "create",
+          "description": "Implement the Contact section with name/email/subject/message fields, client-side validation, submit state (loading), and success/error confirmation UI."
+        },
+        {
+          "path": "frontend/src/components/forms/ContactForm.tsx",
+          "operation": "create",
+          "description": "Add a dedicated ContactForm component that calls the backend capability submitContactForm via the existing actor hook (useActor), handles boolean success response, and surfaces errors gracefully."
+        },
+        {
+          "path": "frontend/src/hooks/useSubmitContactForm.ts",
+          "operation": "create",
+          "description": "Create a React Query mutation hook that uses useActor to invoke submitContactForm and standardizes loading/success/error behavior for the Contact form."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Wire ContactSection into the page with a stable anchor ID for navigation."
+        }
+      ]
+    },
+    {
+      "id": "REQ-8",
+      "summary": "Establish and apply a cohesive UI token system (colors, typography scale, spacing, button/card styles) aligned with an innovative, trustworthy blue/white MVP demo look.",
+      "acceptanceCriteria": [
+        "A single consistent visual system is evident across all sections (same button styles, same card treatments, consistent headings/body sizing).",
+        "Blue/white remains the dominant palette; any additional accent color is used sparingly and consistently.",
+        "Icons, cards, and charts feel cohesive and not mismatched in style."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Define/adjust shared UI tokens using CSS variables (primary/secondary/surface/muted/border/ring, typography defaults) and apply consistent base styles for headings, links, buttons, and cards."
+        },
+        {
+          "path": "frontend/src/components/ui/BrandButton.tsx",
+          "operation": "create",
+          "description": "Create a small wrapper component that composes existing shadcn UI primitives for consistent button styling across the site (do not edit files in frontend/src/components/ui). Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/components/ui/BrandCard.tsx",
+          "operation": "create",
+          "description": "Create a card wrapper component that composes existing shadcn UI primitives for consistent card surfaces/borders/shadows across sections (do not edit files in frontend/src/components/ui). Verify the component's usage instructions before implementing."
+        }
+      ]
+    },
+    {
+      "id": "REQ-9",
+      "summary": "Add conceptual Smart Analytics Dashboard visuals (charts/graphs) for trends, risk prediction, and improvement suggestions without external services.",
+      "acceptanceCriteria": [
+        "Analytics section contains at least 2 chart-style visuals and short explanatory text for trends, risk prediction, and suggested improvements.",
+        "No third-party analytics/AI services are called from the app."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/sections/AnalyticsSection.tsx",
+          "operation": "create",
+          "description": "Implement an Analytics section with at least two chart-style visuals (e.g., simple inline SVG charts) and explanatory text covering trends, risk prediction, and improvement suggestions (conceptual)."
+        },
+        {
+          "path": "frontend/src/components/charts/SimpleLineChart.tsx",
+          "operation": "create",
+          "description": "Create a lightweight, purely client-side chart component for trend visualization (SVG-based, responsive, accessible labels)."
+        },
+        {
+          "path": "frontend/src/components/charts/RiskBarChart.tsx",
+          "operation": "create",
+          "description": "Create a lightweight, purely client-side chart component for conceptual risk prediction visualization (SVG-based, responsive, accessible labels)."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Wire AnalyticsSection into the page and ensure it matches the overall visual system (cards, typography, colors)."
+        }
+      ]
+    },
+    {
+      "id": "REQ-10",
+      "summary": "Add a top navigation/sticky header with anchor links and implement accessibility basics (semantics, keyboard, focus, contrast).",
+      "acceptanceCriteria": [
+        "Navigation links scroll to the correct section anchors.",
+        "Interactive elements are keyboard accessible with visible focus states.",
+        "Headings follow a logical hierarchy (one H1, then H2s, etc.).",
+        "Color contrast is sufficient for primary text and buttons."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/Header.tsx",
+          "operation": "create",
+          "description": "Create a sticky header with navigation links to Features, Dashboard, Benefits, About, and Contact; implement keyboard-accessible links and visible focus styles."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Wire Header into the app shell and ensure each target section has matching IDs; enforce a single H1 in Hero and H2s for sections."
+        },
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Ensure global focus-visible styling, adequate contrast defaults, and accessible link/button hover/focus states across the blue/white theme."
+        }
+      ]
+    },
+    {
+      "id": "REQ-11",
+      "summary": "Use generated images as static frontend assets under frontend/public/assets/generated and reference them directly from the UI.",
+      "acceptanceCriteria": [
+        "All images listed in imageRequirements.required exist under frontend/public/assets/generated and are used in the relevant sections.",
+        "No backend endpoints are created for image delivery."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/sections/HeroSection.tsx",
+          "operation": "modify",
+          "description": "Reference and render the static hero image frontend/public/assets/generated/hero-illustration.dim_1600x900.png in the Hero section with responsive sizing and appropriate alt text."
+        },
+        {
+          "path": "frontend/src/components/sections/DashboardPreviewSection.tsx",
+          "operation": "modify",
+          "description": "Reference and render frontend/public/assets/generated/dashboard-mockup-1.dim_1400x900.png and frontend/public/assets/generated/dashboard-mockup-2.dim_1400x900.png as static mockups with captions (no backend image serving)."
+        },
+        {
+          "path": "frontend/src/components/sections/FaceAttendanceDemoSection.tsx",
+          "operation": "modify",
+          "description": "Reference and render frontend/public/assets/generated/face-attendance-camera-mock.dim_1200x800.png and frontend/public/assets/generated/face-attendance-workflow.dim_1400x320.png as static visuals (no backend image serving)."
+        }
+      ]
+    }
+  ]
+}

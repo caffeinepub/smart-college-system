@@ -1,0 +1,236 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-build-a-modern-responsive-landing-website-named-smart-college-system-with-an-academic-blue-white-theme-professional-typography-card-based-layout-icons-and-smooth-ui-animations-ensure-the-full-site-works-well-on-mobile-and-desktop",
+      "featureTitle": "Build a modern, responsive landing website named “Smart College System” with an academic blue/white theme, professional typography, card-based layout, icons, and smooth UI animations; ensure the full site works well on mobile and desktop.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/index.css"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-1"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-the-landing-page-structure-with-the-required-sections-and-english-user-facing-text-hero-with-headline-exactly-smart-college-system-ai-powered-education-management-features-icons-brief-explanations-dashboard-preview-mockup-section-benefits-section-students-faculty-admin-about-future-scope-of-ai-in-education-contact-form-and-footer-with-social-links",
+      "featureTitle": "Implement the landing page structure with the required sections and English user-facing text: Hero (with headline exactly “Smart College System – AI-Powered Education Management”), Features (icons + brief explanations), Dashboard preview mockup section, Benefits section (Students / Faculty / Admin), About & Future Scope of AI in education, Contact form, and Footer with social links.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/Footer.tsx",
+        "frontend/src/components/sections/AboutSection.tsx",
+        "frontend/src/components/sections/BenefitsSection.tsx",
+        "frontend/src/components/sections/HeroSection.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-2"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-feature-showcase-cards-tiles-for-the-seven-core-modules-each-with-an-icon-and-a-concise-description-ai-student-portal-ai-chatbot-virtual-assistant-smart-analytics-dashboard-ai-faculty-assistant-face-recognition-attendance-concept-demo-smart-admissions-system-and-campus-intelligence",
+      "featureTitle": "Add feature showcase cards/tiles for the seven core modules, each with an icon and a concise description: AI Student Portal, AI Chatbot / Virtual Assistant, Smart Analytics Dashboard, AI Faculty Assistant, Face Recognition Attendance (Concept/Demo), Smart Admissions System, and Campus Intelligence.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/FeatureCard.tsx",
+        "frontend/src/components/sections/FeaturesSection.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-3"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-a-dashboard-preview-section-that-visually-demonstrates-the-platform-with-screenshot-style-mockups-static-images-and-accompanying-captions-for-student-performance-attendance-notifications-and-analytics",
+      "featureTitle": "Create a “Dashboard Preview” section that visually demonstrates the platform with screenshot-style mockups (static images) and accompanying captions for student performance, attendance, notifications, and analytics.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/sections/DashboardPreviewSection.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-4"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-a-face-recognition-attendance-concept-demo-section-that-explains-the-ai-based-face-attendance-workflow-and-includes-camera-ui-style-mockup-visuals-plus-a-simple-step-by-step-workflow-visualization-conceptual-not-real-face-recognition",
+      "featureTitle": "Add a “Face Recognition Attendance (Concept/Demo)” section that explains the AI-based face attendance workflow and includes camera UI-style mockup visuals plus a simple step-by-step workflow visualization (conceptual, not real face recognition).",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/sections/FaceAttendanceDemoSection.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-5"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-include-lightweight-interactive-demos-no-external-ai-llm-integration-1-a-smart-admissions-eligibility-checker-form-marks-category-course-preference-that-shows-instant-results-client-side-2-a-chatbot-ui-mock-that-answers-a-fixed-set-of-faqs-about-courses-fees-timetable-exams-results-and-campus-services",
+      "featureTitle": "Include lightweight interactive demos (no external AI/LLM integration): (1) a Smart Admissions eligibility checker form (marks, category, course preference) that shows instant results client-side; (2) a Chatbot UI mock that answers a fixed set of FAQs about courses, fees, timetable, exams, results, and campus services.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/demos/AdmissionsEligibilityDemo.tsx",
+        "frontend/src/components/demos/ChatbotMock.tsx",
+        "frontend/src/components/sections/InteractiveDemosSection.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-6"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-a-contact-form-that-lets-users-submit-name-email-subject-and-message-persist-submissions-in-the-motoko-canister-and-show-a-clear-success-error-state-in-the-ui",
+      "featureTitle": "Implement a Contact form that lets users submit name, email, subject, and message; persist submissions in the Motoko canister and show a clear success/error state in the UI.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/forms/ContactForm.tsx",
+        "frontend/src/components/sections/ContactSection.tsx",
+        "frontend/src/hooks/useSubmitContactForm.ts"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-7"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-apply-a-consistent-innovative-trustworthy-visual-direction-suitable-for-a-final-year-project-startup-mvp-demo-while-staying-within-the-requested-academic-blue-white-palette-define-a-coherent-set-of-ui-tokens-primary-secondary-colors-surface-colors-typography-scale-spacing-button-styles-and-use-them-throughout",
+      "featureTitle": "Apply a consistent, innovative, trustworthy visual direction suitable for a final-year project/startup MVP demo while staying within the requested academic blue/white palette; define a coherent set of UI tokens (primary/secondary colors, surface colors, typography scale, spacing, button styles) and use them throughout.",
+      "files": [
+        "frontend/src/index.css"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-8"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-static-smart-analytics-dashboard-visuals-charts-graphs-illustrating-student-performance-trends-risk-prediction-and-improvement-suggestions-conceptual-charts-can-be-illustrative-static-images-or-simple-client-side-chart-rendering-but-must-not-require-external-services",
+      "featureTitle": "Add static “Smart Analytics Dashboard” visuals (charts/graphs) illustrating student performance trends, risk prediction, and improvement suggestions (conceptual). Charts can be illustrative (static images or simple client-side chart rendering) but must not require external services.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/charts/RiskBarChart.tsx",
+        "frontend/src/components/charts/SimpleLineChart.tsx",
+        "frontend/src/components/sections/AnalyticsSection.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-9"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-a-simple-top-navigation-or-sticky-header-with-links-to-major-sections-features-dashboard-benefits-about-contact-and-ensure-accessibility-basics-semantic-headings-keyboard-navigation-focus-states-contrast",
+      "featureTitle": "Add a simple top navigation (or sticky header) with links to major sections (Features, Dashboard, Benefits, About, Contact) and ensure accessibility basics (semantic headings, keyboard navigation, focus states, contrast).",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/Header.tsx",
+        "frontend/src/index.css"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-10"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-render-all-generated-image-assets-from-the-frontend-as-static-files-under-frontend-public-assets-generated-and-reference-them-directly-from-the-ui-do-not-serve-images-through-the-backend",
+      "featureTitle": "Render all generated image assets from the frontend as static files under frontend/public/assets/generated and reference them directly from the UI (do not serve images through the backend).",
+      "files": [
+        "frontend/src/components/sections/DashboardPreviewSection.tsx",
+        "frontend/src/components/sections/FaceAttendanceDemoSection.tsx",
+        "frontend/src/components/sections/HeroSection.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-11"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

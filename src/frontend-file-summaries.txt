@@ -1,0 +1,23 @@
+{
+  "frontend/src/index.css": "Global styles with academic blue/white OKLCH color system for light and dark modes, custom animations respecting prefers-reduced-motion, and accessibility-focused focus states.",
+  "frontend/src/App.tsx": "Main application component that renders the complete single-page website structure with header, all content sections, and footer.",
+  "frontend/src/components/Header.tsx": "Sticky navigation header with logo, desktop/mobile menus, smooth scroll navigation, and responsive design.",
+  "frontend/src/components/Footer.tsx": "Footer component with branding, quick links, social media icons, and copyright attribution including caffeine.ai link.",
+  "frontend/src/components/sections/HeroSection.tsx": "Hero section with headline \"Smart College System – AI-Powered Education Management\", hero illustration, and CTA buttons.",
+  "frontend/src/components/sections/FeaturesSection.tsx": "Features showcase section displaying all seven core AI modules with icons and descriptions in a responsive grid.",
+  "frontend/src/components/FeatureCard.tsx": "Reusable feature card component with icon, title, description, and hover effects.",
+  "frontend/src/components/sections/DashboardPreviewSection.tsx": "Dashboard preview section displaying two mockup screenshots with captions and hover effects.",
+  "frontend/src/components/sections/AnalyticsSection.tsx": "Smart analytics section with performance trends chart, risk prediction chart, and AI improvement suggestions.",
+  "frontend/src/components/charts/SimpleLineChart.tsx": "SVG-based line chart component for visualizing student performance trends over semesters.",
+  "frontend/src/components/charts/RiskBarChart.tsx": "SVG-based horizontal bar chart for displaying risk prediction levels (low, medium, high).",
+  "frontend/src/components/sections/FaceAttendanceDemoSection.tsx": "Face recognition attendance concept demo section with camera mockup, workflow visualization, and disclaimer.",
+  "frontend/src/components/sections/InteractiveDemosSection.tsx": "Container section for interactive demos including admissions checker and chatbot.",
+  "frontend/src/components/demos/AdmissionsEligibilityDemo.tsx": "Interactive admissions eligibility checker with rule-based logic for marks, category, and course preferences.",
+  "frontend/src/components/demos/ChatbotMock.tsx": "AI chatbot UI mock with predefined Q&A responses for courses, fees, timetable, exams, results, and campus services.",
+  "frontend/src/components/sections/BenefitsSection.tsx": "Benefits section showcasing tailored advantages for students, faculty, and administrators in three columns.",
+  "frontend/src/components/sections/AboutSection.tsx": "About section with system description, mission/vision, and future scope of AI in education.",
+  "frontend/src/components/sections/ContactSection.tsx": "Contact section with form and contact information including email, phone, and address.",
+  "frontend/src/components/forms/ContactForm.tsx": "Contact form component with validation, loading states, success/error feedback, and backend integration.",
+  "frontend/src/hooks/useSubmitContactForm.ts": "React Query mutation hook for submitting contact form data to the backend canister.",
+  "frontend/tailwind.config.js": "Tailwind configuration with extended color tokens, Inter font family, and custom design system settings."
+}
